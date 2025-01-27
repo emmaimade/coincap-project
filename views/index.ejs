@@ -1,0 +1,34 @@
+<%- include('./header.ejs') %>
+
+
+    <div class="container">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Coin</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">24h Volume</th>
+                    <th scope="col">Market Cap</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% data.forEach((item) => { %>
+                <tr>
+                    <td><%= item.market_cap_rank %></td>
+                    <td>
+                        <strong><%= item.name %></strong> 
+                        <span class="symbol"><%= item.symbol.toUpperCase() %></span>
+                    </td>
+                    <td>$<%= item.current_price %></td>
+                    <td>$<%= item.total_volume %></td>
+                    <td>$<%= item.market_cap %></td>
+                </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
