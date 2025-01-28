@@ -1,9 +1,11 @@
+// import express and axios
 import express from "express";
 import axios from "axios";
 
 const app = express();
 const port = 3000;
 
+// public folder for static files
 app.use(express.static("public"));
 
 // all coins endpoint
