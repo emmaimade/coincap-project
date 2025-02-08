@@ -19,4 +19,5 @@ Run the application
 ## Technologies Used
 - Node.js
 - Express.js
+- Axios
 - CoinGecko API
